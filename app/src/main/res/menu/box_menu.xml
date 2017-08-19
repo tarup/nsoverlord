@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Settings"
+        android:id="@+id/boxmenu_settings"/>
+    <item android:id="@+id/boxtimer_help"
+        android:title="Help" />
+    <item android:id="@+id/clean_button"
+        android:title="Clean"
+        app:showAsAction="always"/>
+</menu>

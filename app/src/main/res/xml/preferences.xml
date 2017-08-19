@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Team Colours"
+        android:key="pref_key_colour_settings">
+        <Preference
+            android:key="pref_key_home_colour"
+            android:summary="Black"
+            android:title="Team Home" />
+        <Preference
+            android:key="pref_key_sms_delete_limit"
+            android:summary="White"
+            android:title="Team Visitor"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Time"
+        android:key="pref_key_time_settings">
+
+        <EditTextPreference
+            android:key="editTextPref_Key"
+            android:title="Period length"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

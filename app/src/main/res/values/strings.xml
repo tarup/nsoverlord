@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NSOverlord</string>
+    <string name="official_review">OR</string>
+    <string name="request_used">--</string>
+    <string name="reset_penaltylabel">00:30.0</string>
+    <string name="reset_penaltylabel_jammers">00:10.0</string>
+    <string name="app_information1">Hello and welcome to use NSOverlord app! This app is in
+        progress and recommended mostly for scrimmages and training. Keep a stopwatch near you,
+        if you use the app for the first time. Happy NSOing!</string>
+</resources>

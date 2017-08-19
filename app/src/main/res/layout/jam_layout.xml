@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Period & Jam counters-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Period: "
+            android:id="@+id/textViewPeriod"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Jam: "
+            android:id="@+id/textViewJam"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/jamNum" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:id="@+id/periodNum"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textViewPeriod" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:id="@+id/jamNum"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <!--The timer-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_weight="6">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="75dp"
+            android:textOff="02:00.0"
+            android:textOn="02:00.0"
+            android:textSize="40dp"
+            android:id="@+id/jamTimerLabel"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/jamtimer_clock"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="30:00.0"
+            android:id="@+id/periodTimerText"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="00:30.0"
+            android:id="@+id/jamTimerText"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/jamTimerLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp" />
+
+        <ToggleButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Start"
+            android:textOn="Stop"
+            android:id="@+id/pauseButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <!--Table of team time-outs and official reviews-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_weight="4">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--First row-->
+            <TableRow>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:text="Time-Outs"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="4"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:text="Official Reviews"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <!--First line-->
+            <TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#949494"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <!--Second row-->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:text="Team Black"
+                    android:padding="5dp"
+                    android:layout_weight="1.5"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+
+                <TableLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <TableRow>
+
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#FFFFFF"
+                            android:id="@+id/toA1"
+                            android:backgroundTint="@color/colorHomeTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick" />
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#FFFFFF"
+                            android:id="@+id/toA2"
+                            android:backgroundTint="@color/colorHomeTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#FFFFFF"
+                            android:id="@+id/toA3"
+                            android:backgroundTint="@color/colorHomeTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+
+                <TableLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+
+                    <TableRow style="@style/tableRow">
+
+                        <Button style="@style/myButton"
+                            android:text="OR"
+                            android:textColor="#FFFFFF"
+                            android:id="@+id/orA1"
+                            android:backgroundTint="@color/colorHomeTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                        <Button style="@style/myButton"
+                            android:text="OR"
+                            android:textColor="#FFFFFF"
+                            android:id="@+id/orA2"
+                            android:backgroundTint="@color/colorHomeTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <!--Second line-->
+            <TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#949494"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <!--Third row-->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:text="Team White"
+                    android:padding="5dp"
+                    android:layout_weight="1.5"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+
+                <TableLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <TableRow style="@style/tableRow">
+
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#000000"
+                            android:id="@+id/toB1"
+                            android:backgroundTint="@color/colorVisitorTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick" />
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#000000"
+                            android:id="@+id/toB2"
+                            android:backgroundTint="@color/colorVisitorTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                        <Button style="@style/myButton"
+                            android:text="TO"
+                            android:textColor="#000000"
+                            android:id="@+id/toB3"
+                            android:backgroundTint="@color/colorVisitorTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#949494" />
+
+                <TableLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+
+                    <TableRow style="@style/tableRow">
+
+                        <Button style="@style/myButton"
+                            android:text="OR"
+                            android:textColor="#000000"
+                            android:id="@+id/orB1"
+                            android:backgroundTint="@color/colorVisitorTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                        <Button style="@style/myButton"
+                            android:text="OR"
+                            android:textColor="#000000"
+                            android:id="@+id/orB2"
+                            android:backgroundTint="@color/colorVisitorTeam"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:onClick="onClick"/>
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <!--Third line-->
+            <TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#949494"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_weight="1.5">
+
+        <Button style="@style/myButton"
+            android:text="Official Time-Out"
+            android:onClick="onClick"
+            android:id="@+id/btnOto"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</LinearLayout>

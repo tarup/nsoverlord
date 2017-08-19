@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="150dp">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/blocker"
+            android:src="@drawable/blocker"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/reset_penaltylabel"
+            android:id="@+id/timer1"
+            android:textSize="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PenaltyToggle1"
+            android:id="@+id/penaltyToggle1"
+            android:paddingLeft="10dp"
+            android:textOff="»"
+            android:textOn="-"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/blocker2"
+            android:src="@drawable/blocker"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/reset_penaltylabel"
+            android:id="@+id/timer2"
+            android:textSize="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PenaltyToggle2"
+            android:id="@+id/penaltyToggle2"
+            android:paddingLeft="10dp"
+            android:textOff="»"
+            android:textOn="-"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PenaltyToggle7"
+            android:textOff="JAM OFF"
+            android:textOn="JAM ON"
+            android:id="@+id/penaltyToggle7"
+            android:background="@android:drawable/btn_default"
+            android:checked="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+</LinearLayout>
