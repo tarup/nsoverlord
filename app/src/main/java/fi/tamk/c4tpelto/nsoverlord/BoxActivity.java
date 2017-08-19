@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -88,8 +89,7 @@ public class BoxActivity extends AppCompatActivity
      */
     private ColorStateList oldColors;
 
-    private List players;
-
+    private List players = new ArrayList();
 
     /**
      * Creates BoxTimer.
